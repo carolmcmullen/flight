@@ -11,7 +11,6 @@ const controller = class MapController {
 
   constructor($http, MapService, appService) {
     'ngInject'
-    //this.settings = ftMapSettings
     this.$http = $http
     this.service = appService
     this.mapService = MapService

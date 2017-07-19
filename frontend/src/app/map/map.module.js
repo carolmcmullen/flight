@@ -1,4 +1,4 @@
-import mapLocations from './map.locations'
+/*import mapLocations from './map.locations'
 import ftMap from './map.component.js'
 import mapService from './map.service'
 
@@ -9,4 +9,4 @@ export default
     .component('ftMap', ftMap)
     .service('MapService', mapService)
     //.service('$map', mapService)
-    .name
+    .name*/

@@ -17,7 +17,7 @@ import { ftProfile } from 'app/component/userprofile.component'
 import { ftMap } from 'app/map/map.component'
 
 import { AppService } from 'app/app.service'
-import { HttpService } from 'app/httpservice.service'
+//import { HttpService } from 'app/httpservice.service'
 import { MapService } from 'app/map/map.service'
 import { run } from 'app/app.run'
 import { ftGameSettings } from 'app/constants'
@@ -48,7 +48,7 @@ export default ng
     mapConfig
   ])
   .service('appService', AppService)
-  .service('httpservice', HttpService)
+  //.service('httpservice', HttpService)
   .service('MapService', MapService)
   .component('ftApp', ftApp)
   .component('ftHeader', ftHeader)

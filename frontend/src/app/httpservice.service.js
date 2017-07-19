@@ -1,4 +1,4 @@
-export class HttpService  {
+/*export class HttpService  {
   constructor ($http) {
     'ngInject'
     this.$http = $http
@@ -52,4 +52,4 @@ export class HttpService  {
     })
   }
 
-}
+}*/

@@ -1,4 +1,4 @@
-export default {
+/*export default {
   memphis: {
     latitude: 35.1495,
     longitude: -90.0490
@@ -13,4 +13,4 @@ export default {
     latitude: 35.9606,
     longitude: -83.9207
   }
-}
+}*/
