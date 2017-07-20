@@ -3,7 +3,7 @@ export const usersConfig =
     'ngInject'
     $stateProvider.state({
       name: 'users',
-      url: '/users',
+      url: '/flights',
       component: 'ftUsers'
     })
   }

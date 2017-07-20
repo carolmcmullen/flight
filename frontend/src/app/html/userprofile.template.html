@@ -1,4 +1,4 @@
-<div >{{profile.localStorageService.get('author')}}'s Profile</div>
+<div >{{profile.localStorageService.get('user')}}'s Profile</div>
 <button type="button" class="btn btn-default" ng-click="profile.logout()">LOGOUT</button>
 <div >First Name: {{profile.fname}}</div>
 <div >Last Name: {{profile.lname}}</div>
@@ -6,8 +6,8 @@
 <div >Email: {{profile.email}}</div></br></br>
 <ul ng-init="profile.loadNewTweets()">
   <dl ng-repeat="data in profile.tweets track by $index" class="homelist dl-horizontal">
-    <dt class="homelist">Author</dt>
-    <dd class="homelist"><button data="{{data.author.username}}" ng-click="home.getSelUser(data.author.username)">{{data.author.username}}</button></dd>
+    <dt class="homelist">user</dt>
+    <dd class="homelist"><button data="{{data.user.username}}" ng-click="home.getSelUser(data.user.username)">{{data.user.username}}</button></dd>
     <dt class="homelist">Tweet</dt>
     <dd class="homelist">{{data.content}}</dd>
     <dt class="homelist">Posted</dt>

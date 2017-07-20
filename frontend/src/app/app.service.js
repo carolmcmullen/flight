@@ -22,7 +22,7 @@ flights = []
       this.error = 'Could not load flights.'
     })
   }
-  multiple () {
+ /* multiple () {
     this.settings.defaultPointSettings.increment += this.settings.defaultPointSettings.modifier.amount
     this.settings.defaultGameSettings.total += this.settings.defaultPointSettings.increment * this.settings.defaultPointSettings.modifier.amount
     this.settings.defaultPointSettings.modifier.amount += 0.2
@@ -49,5 +49,5 @@ flights = []
       this.saveState('automod', this.settings.defaultGameSettings.autoclickers)
       this.saveState('points', this.settings.defaultGameSettings.total)
     }, 1000)
-  }
+  }*/
 }

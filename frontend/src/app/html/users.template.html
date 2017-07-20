@@ -1,13 +1,64 @@
 <button type="button" class="btn btn-default" ng-click="users.logout()">LOGOUT</button>
+
 <div class ="users">
-  <table class="table table-bordered usertable" header-fixed>
+  <!-- <input type="text" ng-model="searchText" ng-change="change(text)" placeholder="origin" />
+  <input type="text" ng-model="searchText" ng-change="change(text)" placeholder="destination" /> -->
+  
+  <html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Aviato Airline</title>
+
+	<!--	<link href="http://fonts.googleapis.com/css?family=Cookie|Open+Sans:400,700" rel="stylesheet" /> -->
+
+		<!-- The main CSS file -->
+		<!-- <link href="style.css" rel="stylesheet" /> -->
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<!-- Initialize a new AngularJS app and associate it with a module named "instantSearch"-->
+	<body ng-app="flightSearch" ng-controller="FLightController" >
+
+		<div class="bar"> 
+			<!-- Create a binding between the searchCities model and the text field -->
+			<input type="text" ng-model="searchCities" placeholder="Enter your origin" />
+		</div>
+    <div class="bar"> 
+			<!-- Create a binding between the searchCities model and the text field -->
+			<input type="text" ng-model="searchCities" placeholder="Enter your destination" />
+		</div>
+
+		<ul> 
+			<!-- Render a li element for every entry in the items array. Notice
+				 the custom search filter "searchFor". It takes the value of the
+				 searchCities model as an argument.
+			 -->
+			<li ng-repeat="i in items | searchFor:searchCities">
+				<a href="{{i.url}}"><img ng-src="{{i.image}}" /></a>
+				<p>{{i.title}}</p>
+			</li>
+		</ul> 
+
+		<!-- Include AngularJS from Google's CDN -->
+	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html> 
+
+  <button type="button" class="btn btn-default" ng-click="cities.search()">SEARCH FLIGHTS</button>
+  
+   <table class="table table-bordered usertable" header-fixed>
     <thead>
-      <th>Follow</th>
-      <th>Unfollow</th>
+      <!-- <th>Follow</th>
+      <th>Unfollow</th> -->
       <th>
-        <a href="#" ng-click="orderByField='username'; reverseSort = !reverseSort">
-        Username
-          <span ng-show="orderByField == 'username'">
+        <a href="#" ng-click="orderByField='origin'; reverseSort = !reverseSort">
+        origin
+          <span ng-show="orderByField == 'origin'">
             <span ng-show="!reverseSort">^
             </span>
             <span ng-show="reverseSort">v
@@ -15,11 +66,11 @@
           </span>
         </a>
       </th>
-      <th>Follower</th>
+     <!-- <th>Follower</th> -->
       <th>
-        <a href="#" ng-click="orderByField='profile.firstName'; reverseSort = !reverseSort">
-        Name
-          <span ng-show="orderByField == 'profile.firstName'">
+        <a href="#" ng-click="orderByField='flights.destination'; reverseSort = !reverseSort">
+        destination
+          <span ng-show="orderByField == 'flights.destination'">
             <span ng-show="!reverseSort">^
             </span>
             <span ng-show="reverseSort">v
@@ -28,9 +79,9 @@
         </a>
       </th>
       <th>
-        <a href="#" ng-click="orderByField='profile.email'; reverseSort = !reverseSort">
-        Email
-          <span ng-show="orderByField == 'profile.email'">
+        <a href="#" ng-click="orderByField='flightTime'; reverseSort = !reverseSort">
+        Flight Time
+          <span ng-show="orderByField == 'flightTime'">
             <span ng-show="!reverseSort">^
             </span>
             <span ng-show="reverseSort">v
@@ -38,8 +89,9 @@
           </span>
         </a>
       </th>
+      <th>offset</th>
     </thead>
-    <tbody>
+    <!--<tbody>
       <tr ng-repeat="user in users.users | orderBy:orderByField:reverseSort track by $index"
           ng-class="{'selected':$index == selectedRow}">
         <td class="followcheck">
@@ -67,7 +119,7 @@
           </span>
         </td>
         <td>{{user.profile.firstName}} {{user.profile.lastName}}</td>
-        <td>{{user.profile.email}}</td>
+        <td>{{user.profile.email}}</td> -->
     <!-- <td>{{user.profile.phone}}</td> -->
       </tr>
     </tbody>

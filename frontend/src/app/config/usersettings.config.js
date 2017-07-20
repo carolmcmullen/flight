@@ -3,7 +3,7 @@ export const usersettingsConfig =
     'ngInject'
     $stateProvider.state({
       name: 'usersettings',
-      url: '/usersettings',
+      url: '/update',
       component: 'ftUserSettings'
     })
   }

@@ -22,11 +22,11 @@ export const userInfo = {
   isAuthenticated: false
 }
 export const user = {
-  firstname: undefined,
-  lastname: undefined,
+  /*firstname: undefined,
+  lastname: undefined,*/
   password: undefined,
-  username: undefined,
-  email: undefined
+  username: undefined
+  /*email: undefined*/
 }
 export const wallpaperSettings = {
   metal: 'url(/images/bg5.jpg)',
